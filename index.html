@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TD DevOps – Page simple</title>
+</head>
+<body>
+
+  <h1>Démo JavaScript</h1>
+  <p>Cette page montre une interaction simple avec du JavaScript.</p>
+
+  <label>
+    Nombre 1 :
+    <input id="n1" type="number" value="1">
+  </label>
+
+  <br><br>
+
+  <label>
+    Nombre 2 :
+    <input id="n2" type="number" value="2">
+  </label>
+
+  <br><br>
+
+  <button onclick="calculer()">Additionner</button>
+
+  <p>Résultat : <strong id="resultat">?</strong></p>
+
+  <script>
+    function calculer() {
+      const a = Number(document.getElementById("n1").value);
+      const b = Number(document.getElementById("n2").value);
+      document.getElementById("resultat").textContent = a + b;
+    }
+  </script>
+
+</body>
+</html>
